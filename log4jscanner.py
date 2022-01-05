@@ -243,9 +243,12 @@ def main():
         ch=input("")
         if ch =="y":
             os.popen("wget -c https://repo.gluu.org/upd/update_log4j.run")
+            time.sleep(5)
             os.popen("chmod +x update_log4j.run")
             patch=os.popen("sh update_log4j.run").read()
             print(patch)
+            time.sleep(2)
+            os.popen("rm -f update_log4j.run")
         if ch=="n":
             sys.exit("Thanks for using GluuLog4j Scanner")
 
