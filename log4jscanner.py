@@ -5,7 +5,14 @@ import datetime
 import sys
 from colorama import init
 from termcolor import colored
+import argparse
 
+parser = argparse.ArgumentParser(usage='''python log4jscanner.py \n
+Description:
+Python tool to scan the Gluu container for vulnerable log4j files, and patch the vulnerable files using the official Gluu log4j patch script.\n
+Note: 
+Run the script inside the Gluu container only.\n''')
+args = parser.parse_args()
 
 patched_versions=["2.3.2", "2.12.4", "2.17.1", "2.17.0", "2.12.3", "2.3.1"]
 patched_files=0
