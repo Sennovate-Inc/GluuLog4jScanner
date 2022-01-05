@@ -9,14 +9,14 @@ On the 9th of December 2021, a vulnerability, CVE-2021-44228, was disclosed conc
 Clone the repository using the below command  <br/>
                 ``git clone https://github.com/Sennovate-Inc/GluuLog4jScanner.git``
 
-After repository is downloaded, cd into the directory and install all the required modules using the below command <br/>
+After the repository is downloaded, cd into the directory and install all the required modules using the below command <br/>
                 ``pip -r install requirements.txt``
 ## **How it works**
 The log4jscanner is a simple tool, after the execution of the tool inside the Gluu container. It performs the following steps:<br/>
 1. Scan for all the services that are running inside the Gluu container.<br/>
-2. After getting the list of each service, it start scanning the war file of each service. To check the version of all the log4j files used by these service.<br/>
-3. The version is checked against the latest version of jar file that are released by the Apache officially.<br/>
-4. Provide the detailed list of all the vulnerable file and total no of file scanned.<br/>
+2. After getting the list of each service, it starts scanning the war file of each service. To check the version of all the log4j files used by these services.<br/>
+3. The version is checked against the latest version of the jar files that are released by Apache officially.<br/>
+4. Provide a detailed list of all the vulnerable files and the total no of files scanned.<br/>
 5. If required user can also use the log4j scanner to patch the vulnerable file using the official automated script released by the Gluu.<br/>
 
 **Usage**<br/>
@@ -25,10 +25,10 @@ The log4jscanner is a simple tool, after the execution of the tool inside the Gl
 
 
 ## **Reference**
-As being the part of the open-source community, it didn't required us to "re-invent the wheel" completely. The log4jscanner is derived from the works of:
+As being part of the open-source community, it didn't require us to "re-invent the wheel" completely. The log4jscanner is derived from the works of:
 
-[Official Gluu patch](https://repo.gluu.org/upd/update_log4j.run) - Automated script to patch all the required jar file inside the gluu container.
-[Apache log4j 2 project ](https://logging.apache.org/log4j/2.x/index.html) - Developer of patched log4j jar files.
+[Official Gluu patch](https://repo.gluu.org/upd/update_log4j.run) - Automated script to patch all the required jar files inside the Gluu container. <br/>
+[Apache log4j 2 project ](https://logging.apache.org/log4j/2.x/index.html) - Developer of patched log4j jar files.<br/>
 
 ## **Legal Disclaimer:**
 USE THIS TOOL AT YOUR OWN RISK. THIS TOOL COMES WITH NO WARRANTY, EITHER EXPRESS OR IMPLIED. THE SENNOVATE ORGANIZATION ASSUMES NO LIABILITY FOR THE USE OR MISUSE OF THIS SOFTWARE OR ITS DERIVATIVES.
