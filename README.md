@@ -1,5 +1,6 @@
 # GluuLog4jScanner
 Python tool to scan the Gluu container for vulnerable log4j files
+![This is a image](https://github.com/Sennovate-Inc/GluuLog4jScanner/blob/main/screenshot.png)
 
 ## **Overview:**
 On the 9th of December 2021, a vulnerability, CVE-2021-44228, was disclosed concerning Apache Log4j, a popular open-source library. The vulnerability allows remote code execution and has been assigned a severity of 10.0, the highest possible, this vulnerability also affected the Gluu servers.
