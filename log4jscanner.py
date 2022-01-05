@@ -30,7 +30,7 @@ def scan_oxauth():
         if bool(version):
             for j in range(len(patched_versions)):   
                 if version == patched_versions[j]:
-                    result="GOOD"
+                    result="NOT VULNERABLE"
                     text_color="green"
                     bg_color="on_grey"
                     break
@@ -39,7 +39,7 @@ def scan_oxauth():
                     text_color="white"
                     bg_color="on_red"
             print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")+" /opt/gluu/jetty/oxauth/webapps/oxauth.war ==> "+list_oxauth_log4j_version[i]+" | "+colored(result, text_color, bg_color))
-            if result =="GOOD":
+            if result =="NOT VULNERABLE":
                 global patched_files
                 patched_files=patched_files+1
             if result =="VULNERABLE":
@@ -57,7 +57,7 @@ def scan_identity():
         if bool(version):
             for j in range(len(patched_versions)):   
                 if version == patched_versions[j]:
-                    result="GOOD"
+                    result="NOT VULNERABLE"
                     text_color="green"
                     bg_color="on_grey"
                     break
@@ -66,7 +66,7 @@ def scan_identity():
                     text_color="white"
                     bg_color="on_red"
             print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")+" /opt/gluu/jetty/oxauth/identity/oxauth.war ==> "+list_identity_log4j_version[i]+" | "+colored(result, text_color, bg_color))
-            if result =="GOOD":
+            if result =="NOT VULNERABLE":
                 global patched_files
                 patched_files=patched_files+1
             if result =="VULNERABLE":
@@ -84,7 +84,7 @@ def scan_idp():
         if bool(version):
             for j in range(len(patched_versions)):   
                 if version == patched_versions[j]:
-                    result="GOOD"
+                    result="NOT VULNERABLE"
                     text_color="green"
                     bg_color="on_grey"
                     break
@@ -93,7 +93,7 @@ def scan_idp():
                     text_color="white"
                     bg_color="on_red"
             print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")+" /opt/gluu/jetty/ipd/webapps/oxauth.war ==> "+list_idp_log4j_version[i]+" | "+colored(result, text_color, bg_color))
-            if result =="GOOD":
+            if result =="NOT VULNERABLE":
                 global patched_files
                 patched_files=patched_files+1
             if result =="VULNERABLE":
@@ -111,7 +111,7 @@ def scan_casa():
         if bool(version):
             for j in range(len(patched_versions)):   
                 if version == patched_versions[j]:
-                    result="GOOD"
+                    result="NOT VULNERABLE"
                     text_color="green"
                     bg_color="on_grey"
                     break
@@ -120,7 +120,7 @@ def scan_casa():
                     text_color="white"
                     bg_color="on_red"
             print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")+" /opt/gluu/jetty/casa/webapps/oxauth.war ==> "+list_casa_log4j_version[i]+" | "+colored(result, text_color, bg_color))    
-            if result =="GOOD":
+            if result =="NOT VULNERABLE":
                 global patched_files
                 patched_files=patched_files+1
             if result =="VULNERABLE":
@@ -138,7 +138,7 @@ def scan_fido():
         if bool(version):
             for j in range(len(patched_versions)):    
                 if version == patched_versions[j]:
-                    result="GOOD"
+                    result="NOT VULNERABLE"
                     text_color="green"
                     bg_color="on_grey"
                     break
@@ -147,7 +147,7 @@ def scan_fido():
                     text_color="white"
                     bg_color="on_red" 
             print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")+" /opt/gluu/jetty/fido2/webapps/oxauth.war ==> "+list_fido_log4j_version[i]+" | "+colored(result, text_color, bg_color)) 
-            if result =="GOOD":
+            if result =="NOT VULNERABLE":
                 global patched_files
                 patched_files=patched_files+1
             if result =="VULNERABLE":
@@ -165,7 +165,7 @@ def scan_scim():
         if bool(version):
             for j in range(len(patched_versions)):  
                 if version == patched_versions[j]:
-                    result="GOOD"
+                    result="NOT VULNERABLE"
                     text_color="green"
                     bg_color="on_grey"
                     break
@@ -174,7 +174,7 @@ def scan_scim():
                     text_color="white"
                     bg_color="on_red"
             print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")+" /opt/gluu/jetty/scim/webapps/oxauth.war ==> "+list_scim_log4j_version[i]+" | "+colored(result, text_color, bg_color))    
-            if result =="GOOD":
+            if result =="NOT VULNERABLE":
                 global patched_files
                 patched_files=patched_files+1
             if result =="VULNERABLE":
