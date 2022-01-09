@@ -1,17 +1,24 @@
 # GluuLog4jScanner
 Python tool to scan the Gluu container for vulnerable log4j files and patch the vulnerable Gluu servers.
-![This is a image](https://github.com/Sennovate-Inc/GluuLog4jScanner/blob/main/screenshot.png)
+![Screenshot](https://github.com/Sennovate-Inc/GluuLog4jScanner/blob/main/screenshot.png)
 
 ## **Overview:**
 On the 9th of December 2021, a vulnerability, CVE-2021-44228, was disclosed concerning Apache Log4j, a popular open-source library. The vulnerability allows remote code execution and has been assigned a severity of 10.0, the highest possible, this vulnerability also affected the Gluu servers.
 
 ## **How to install**
-Clone the repository using the below command  <br/>
-                ``git clone https://github.com/Sennovate-Inc/GluuLog4jScanner.git``
 
-After the repository is downloaded, cd into the directory and install all the required modules using the below command <br/>
-                ``pip -r install requirements.txt``
+Clone the repository using the below command
+```bash
+git clone https://github.com/Sennovate-Inc/GluuLog4jScanner.git
+```
+
+After the repository is downloaded, cd into the directory and install all the required modules using the below command
+```python
+pip -r install requirements.txt
+```
+
 ## **How it works**
+
 The log4jscanner is a simple tool, after the execution of the tool inside the Gluu container. It performs the following steps:<br/>
 1. Scan for all the services that are running inside the Gluu container.<br/>
 2. After getting the list of each service, it starts scanning the war file of each service. To check the version of all the log4j files used by these services.<br/>
@@ -19,10 +26,10 @@ The log4jscanner is a simple tool, after the execution of the tool inside the Gl
 4. Provide a detailed list of all the vulnerable files and the total no of files scanned.<br/>
 5. If required user can also use the log4j scanner to patch the vulnerable file using the official automated script released by the Gluu.<br/>
 
-**Usage**<br/>
-``python log4jscanner.py``
-
-
+**Usage**
+```python
+python log4jscanner.py
+```
 
 ## **Reference**
 As being part of the open-source community, it didn't require us to "re-invent the wheel" completely. The log4jscanner is derived from the works of:
@@ -36,4 +43,4 @@ USE THIS TOOL AT YOUR OWN RISK. THIS TOOL COMES WITH NO WARRANTY, EITHER EXPRESS
 THIS SOFTWARE IS OFFERED “AS-IS.” THE SENNOVATE ORGANIZATION WILL NOT INSTALL, REMOVE, OPERATE OR SUPPORT THIS SOFTWARE AT YOUR REQUEST. IF YOU ARE UNSURE OF HOW THIS SOFTWARE WILL INTERACT WITH YOUR SYSTEM, DO NOT USE IT.
 
 ## **Contact Info.**
-For more info contact Sennovate - support@sennovate.com
+For more info contact Sennovate - [support@sennovate.com](mailto:support@sennovate.com)
