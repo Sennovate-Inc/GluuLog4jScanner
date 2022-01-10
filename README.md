@@ -30,7 +30,7 @@ The log4jscanner is a simple tool, after the execution of the tool inside the Gl
 ```python
 python log4jscanner.py
 ```
-After the log4j patch is applied by the log4jscanner script. You can revert back to the state before the patch has been applied.
+The Log4jscanner also have a option so we can revert back to the state before the patch has been been applied using the '-r' flag.
 ```python
 python log4jscanner.py -r
 ```
