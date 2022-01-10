@@ -25,13 +25,13 @@ The log4jscanner is a simple tool, after the execution of the tool inside the Gl
 3. The version is checked against the latest version of the jar files that are released by Apache officially.<br/>
 4. Provide a detailed list of all the vulnerable files and the total no of files scanned.<br/>
 5. If required user can also use the log4j scanner to patch the vulnerable file using the official automated script released by the Gluu.<br/>
-6. Before applying the patch it also backup all the files, so the user have a option to revert back to this state.
+6. Before applying the patch it also backup all the files, so the user has an option to revert to this state.
 
 **Usage**
 ```python
 python log4jscanner.py
 ```
-The Log4jscanner also have a option so we can revert back to the state before the patch has been been applied using the '-r' flag.
+The Log4jscanner also has an option so we can revert to the state before the patch has been applied using the '-r' flag.
 ```python
 python log4jscanner.py -r
 ```
