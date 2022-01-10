@@ -338,38 +338,38 @@ def main():
     print("Total files scanned:",vulnerable_files+patched_files)
     print("Out of "+str(vulnerable_files+patched_files)+" files, "+str(vulnerable_files)+" files are VULNERABLE")
 
-    if vulnerable_files >= 0:
+    if vulnerable_files > 0:
         print("Do you want to patch the system? (y|n)")
         ch=input("")
         if ch =="y":
             print("Following Actions will be performed:\n")
             print("1.Backup\n")
             print("2.Patch\n")
-            print("Do you want to continue (y|n)?")
+            print("If you want to continue (type \"confirm\")?")
             ch_2=input("")
-            if ch_2=="n":
+            if ch_2=="confirm" or ch_2=="Confirm" or ch_2=="CONFIRM":
+                os.popen("wget -c https://repo.gluu.org/upd/update_log4j.run")
+                time.sleep(4)
+                print("Taking backup of all the essential files, so you can revert back after the patch is been applied")
+                if oxauth_status=="active":
+                    backup_oxauth()
+                if identity_status=="active":
+                    backup_identity()
+                if idp_status=="active":
+                    backup_idp()
+                if casa_status=="active":
+                    backup_casa()
+                if fido_status=="active":
+                    backup_fido()
+                if scim_status=="active":
+                    backup_scim()
+                os.popen("chmod +x update_log4j.run")
+                patch=os.popen("sh update_log4j.run").read()
+                print(patch)
+                time.sleep(2)
+                os.popen("rm -f update_log4j.run")
+            else :
                 sys.exit("Exiting the script. Thanks for using log4jscanner.")
-            os.popen("wget -c https://repo.gluu.org/upd/update_log4j.run")
-            time.sleep(4)
-            print("Taking backup of all the essential files, so you can revert back after the patch is been applied")
-            if oxauth_status=="active":
-                backup_oxauth()
-            if identity_status=="active":
-                backup_identity()
-            if idp_status=="active":
-                backup_idp()
-            if casa_status=="active":
-                backup_casa()
-            if fido_status=="active":
-                backup_fido()
-            if scim_status=="active":
-                backup_scim()
-            os.popen("chmod +x update_log4j.run")
-            patch=os.popen("sh update_log4j.run").read()
-            print(patch)
-            time.sleep(2)
-            os.popen("rm -f update_log4j.run")
-
         if ch=="n":
             sys.exit("Thanks for using GluuLog4j Scanner")
 
