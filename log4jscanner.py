@@ -278,6 +278,7 @@ def main():
     oxauth_status,identity_status,idp_status,casa_status,fido_status,scim_status=check_services()
     if args.revert:
         revert_back(oxauth_status,identity_status,idp_status,casa_status,fido_status,scim_status)
+        time.sleep(120)
         sys.exit("All the services are reverted back to the state before the patch was applied.")
 
     
