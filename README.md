@@ -65,7 +65,7 @@ As being part of the open-source community, it didn't require us to "re-invent t
 
 ## **Contributing**
 
-When contributing to this repository, please first discuss the change you wish to make via issue,before making a change.
+Please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file for more details and guidelines.
 
 ## **Legal Disclaimer:**
 USE THIS TOOL AT YOUR OWN RISK. THIS TOOL COMES WITH NO WARRANTY, EITHER EXPRESS OR IMPLIED. THE SENNOVATE ORGANIZATION ASSUMES NO LIABILITY FOR THE USE OR MISUSE OF THIS SOFTWARE OR ITS DERIVATIVES.
