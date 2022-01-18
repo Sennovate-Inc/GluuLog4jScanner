@@ -30,7 +30,7 @@ git clone https://github.com/Sennovate-Inc/GluuLog4jScanner.git
 After the repository is downloaded, cd into the directory and install all the required modules using the below command
 
 ```python
-pip -r install requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## **How it works**
