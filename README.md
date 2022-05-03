@@ -4,7 +4,7 @@
 ![Screenshot](assets/screenshot.png)
 
 <p align="center">
-  <a href="https://github.com/shagunattri/pwgen/pulls">
+  <a href="https://github.com/Sennovate-Inc/GluuLog4jScanner/pulls">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?longCache=true" alt="Pull Requests">
   </a>
 </p>
